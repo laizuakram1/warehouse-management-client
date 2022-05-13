@@ -1,0 +1,44 @@
+.footer{
+    background-color:#ddd;
+    padding:0px 30px;
+}
+.footer-title-box{
+    margin-top:0px;
+    display:flex;
+    height:100px;
+    align-items: center;
+    justify-content: center;
+   
+    
+}
+.footer-title{
+    line-height: 0px;
+    padding:0px 60px;
+    text-align: center;
+}
+.footer-line{
+    border:1px solid grey;
+    width:20%;
+    height:0;
+}
+.footer-info{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+
+}          
+.footer-info p{
+    line-height:8px;
+}
+.social-link{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+}
+.social-link p{
+    margin-right:30px;
+    
+    
+  
+}
+
