@@ -15,7 +15,7 @@ const Login = () => {
                     <input type="password" name="password" />
                 </div>
                 <input className='form-submit' type="submit" value="Login" />
-                <p>Already have an account? <Link className='form-link' to='/signup'>SignUp</Link></p>
+                <p>New to Lab care? <Link className='form-link' to='/signup'>Create an account</Link></p>
             </form>
         </div>
     );
