@@ -1,9 +1,11 @@
 
 .manageInventoryBtn{
     text-align: center;
+    
    
 }
-.manageInventoryBtn button{
+.manageInventoryBtn a{
+    text-decoration: none;
     background-color: orange;
     border:none;
     padding:10px;
@@ -12,7 +14,7 @@
     transition: 0.3s;
 
 }
-.manageInventoryBtn button:hover{
+.manageInventoryBtn a:hover{
     background-color: rgb(215, 185, 130);
     color:black;
 }

@@ -1,15 +1,18 @@
+
 .form-container{
-    width:500px;
+    width:480px;
     border: 1px solid grey;
     border-radius: 10px;
     box-sizing: border-box;
     display:flex;
-    justify-content: center;
     margin:auto;
     margin-top:20px;
+    padding:40px;
 }
 .input-group{
     margin-bottom:20px;
+    
+    
 }
 .form-title{
     font-size:35px;
@@ -21,16 +24,17 @@
     padding:5px;
 }
 .input-group input{
-    width:415px;
-    height:45px;
+    width:400px;
+    height:40px;
     border:1px solid #95A0A7;
     box-sizing: border-box;
     border-radius:5px;
     font-size: 20px;
+   
 }
 .form-submit{
-    width:415px;
-    height:55px;
+    width:400px;
+    height:45px;
     background-color:rgb(244, 217, 169);
     border:none;
     border-radius: 5px;

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import Footer from '../shared/Footer/Footer';
 import Header from '../shared/Header/Header';
 import Banner from './Banner/Banner';
@@ -13,7 +13,7 @@ const Home = () => {
           <Banner></Banner>
           <Inventory></Inventory>
           <div className='manageInventoryBtn mt-3 mb-3'>
-          <button>Manage Inventory</button>
+          <Link to='/manageInventory'>Manage Inventory</Link>
           </div>
           <Footer></Footer>
          

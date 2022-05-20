@@ -12,7 +12,7 @@ const Inventory = () => {
     }, [])
     return (
         <div>
-            <h2 className='text-center p-4'>Inventory items</h2>
+            <h2 className='text-center mb-3'>Inventory items</h2>
 
             <div className='container inventory-container'>
                 {
