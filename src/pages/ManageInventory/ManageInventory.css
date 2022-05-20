@@ -1,0 +1,14 @@
+.add-new{
+    text-align: end;
+    position: fixed;
+    top:30px;
+    right:20px;
+}
+.add-new a{
+    text-decoration: none;
+    background-color: rgb(148, 241, 148);
+    padding:10px;
+    border:none;
+    border-radius:5px;
+    color:black;
+}
