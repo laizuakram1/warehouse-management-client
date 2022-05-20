@@ -5,7 +5,7 @@ import './SignUp.css';
 const SignUp = () => {
     return (
         <div className='form-container'>
-            <form>
+            <form className='text-center'>
                 <h2 className='form-title'>SignUp</h2>
                 <div className='input-group'>
                     <label htmlFor="email">Email</label>

@@ -6,9 +6,9 @@ const Inventory = () => {
     const [items, setItems] = useState([]);
 
     useEffect(() => {
-        fetch(`https://jsonplaceholder.typicode.com/users`)
+        fetch(`https://fakestoreapi.com/products`)
             .then(res => res.json())
-            .then(data => setItems(data))
+            .then(data => setItems(data.slice(0,6)))
     }, [])
     return (
         <div>

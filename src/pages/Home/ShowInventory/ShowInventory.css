@@ -7,6 +7,13 @@
     position:relative;
     bottom:0;
 }
+.inventory-items img{
+    width:200px;
+    height:250px;
+    padding:15px;
+    
+    
+}
 .updateBtn{
     width:280px;
     position:absolute;
