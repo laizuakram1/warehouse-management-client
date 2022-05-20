@@ -10,17 +10,16 @@ const ShowInventory = ({item}) => {
           <div className='text-center'>
           <img src={image} alt="" />
           </div>
-            <p>{name}</p>
-            <p>Price:{price}</p>
+            <p>Name:{name}</p>
+            <p className='fw-bold'>Price:${price}</p>
             <p>Quantity:{quantity}</p>
             <p>Supplier:{supplier}</p>
             <p>description:{description.slice(0,60)}</p>
           
            </div>
-           <Button className='updateBtn'>Update</Button>
-           
-            
-    
+            <div className='mt-5'>
+            <Button className='updateBtn'>Update</Button>
+            </div>
         </div>
     );
 };
