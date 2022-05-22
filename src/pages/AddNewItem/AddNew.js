@@ -10,7 +10,7 @@ const AddNew = () => {
 
     return (
         <div>
-            <form onSubmit={handleSubmit(onSubmit)}>
+            <form className='addForm' onSubmit={handleSubmit(onSubmit)}>
                 <h4 className='text-center text-success mb-3'>Add New Product</h4>
                 <input placeholder='Product Name' {...register("Name", { required: true, maxLength: 20 })} />
                 <input placeholder='Image link ' {...register("image", { required: true, maxLength: 20 })} />
