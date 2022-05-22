@@ -1,5 +1,7 @@
 import React from 'react';
-import { useForm } from "react-hook-form"; import './AddNew.css';
+import { Button } from 'react-bootstrap';
+import { useForm } from "react-hook-form";import { Link } from 'react-router-dom';
+ import './AddNew.css';
 
 
 const AddNew = () => {
@@ -19,7 +21,9 @@ const AddNew = () => {
                
               
               
-                <input className='submitBtn' type="submit" />
+         <div className='text-center'>
+         <Button className='AddBtn btn-success'>Add</Button>
+         </div>
             </form>
 
         </div>

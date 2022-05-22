@@ -39,9 +39,8 @@ form textarea:focus{
     border-radius: 5px;
     box-shadow: 0 0 10px rgb(162, 223, 162);
 }
-.submitBtn{
-    width:150px;
-    background-color: orange;
+.AddBtn{
+    width:120px;
     border:none;
     border-radius: 5px;
     margin-top: 20px;
