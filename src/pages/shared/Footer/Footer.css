@@ -17,7 +17,7 @@
     text-align: center;
 }
 .footer-line{
-    border:1px solid grey;
+    border:1px solid rgb(161, 159, 159);
     width:20%;
     height:0;
 }
@@ -28,6 +28,7 @@
 
 }          
 .footer-info p{
+    font-size:12px;
     line-height:8px;
 }
 .social-link{
