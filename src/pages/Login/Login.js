@@ -2,15 +2,21 @@ import React from 'react';
 import { Button } from 'react-bootstrap';
 import { auth } from '../../firebase.init';
 import { signInWithPopup,GoogleAuthProvider } from "firebase/auth";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import './Login.css';
 
 const provider = new GoogleAuthProvider();
 
+
+
 const Login = () => {
+    const navigate = useNavigate();
+
     const googleAuth = ()=>{
         signInWithPopup(auth, provider)
     .then((result) => {
       const user = result.user;
+      navigate('/')
       console.log(user);
       
       

@@ -1,4 +1,5 @@
 import React from 'react';
+import './Banner.css';
 import { Carousel } from 'react-bootstrap';
 import banner1 from '../../../images/banner/ultra1.jpg';
 import banner2 from '../../../images/banner/care3.jpg';
@@ -6,7 +7,7 @@ import banner3 from '../../../images/banner/care2.jpg';
 
 const Banner = () => {
     return (
-        <div>
+        <div className='slider'>
             <Carousel>
                 <Carousel.Item interval={1500}>
                     <img

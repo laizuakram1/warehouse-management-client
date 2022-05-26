@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button } from 'react-bootstrap';
 import { useForm } from "react-hook-form";import { Link } from 'react-router-dom';
+import Header from '../shared/Header/Header';
  import './AddNew.css';
 
 
@@ -10,6 +11,7 @@ const AddNew = () => {
 
     return (
         <div>
+            <Header></Header>
             <form className='addForm' onSubmit={handleSubmit(onSubmit)}>
                 <h4 className='text-center text-success mb-3'>Add New Product</h4>
                 <input placeholder='Product Name' {...register("Name", { required: true, maxLength: 20 })} />

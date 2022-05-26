@@ -1,8 +1,12 @@
+.manageInventory-title{
+    margin-top: 60px;
+}
 .add-new{
     text-align: end;
     position: fixed;
-    top:30px;
+    top:90px;
     right:20px;
+    z-index: 1;
 }
 .add-new a{
     text-decoration: none;

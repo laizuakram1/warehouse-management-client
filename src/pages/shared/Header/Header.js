@@ -1,7 +1,7 @@
 
 import { onAuthStateChanged } from 'firebase/auth';
 import React, { useEffect, useState } from 'react';
-import { Button, Container, Nav, Navbar } from 'react-bootstrap';
+import { Button, Container, Nav, Navbar, NavLink } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
 import { auth } from '../../../firebase.init';
 import { signOut } from "firebase/auth";
@@ -36,16 +36,18 @@ const Header = () => {
 
   return (
     <div>
-      <Navbar bg="light" variant="light">
+      <Navbar className='fixed-top' bg="light" variant="light">
         <Container>
           <Navbar.Brand href="#home">LabCare Warehouse</Navbar.Brand>
-          <Nav className="ms-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#features">Manage Items</Nav.Link>
-            <Nav.Link href="#features">Add Items</Nav.Link>
+          <Nav className="ms-auto navItem">
+            <Link to='/'>Home</Link>
+            <Link to='/manageInventory'>Manage Items</Link>
+            <Link to='/AddNew'>Add Items</Link>
+            <Link to='/'>My Items</Link>
+
             {
               currentUser.email ? <Button onClick={handleSignout}>LogOut</Button>
-                : <Link to="/login">Login</Link>
+                : <Link className='btn btn-primary' to="/login">Login</Link>
             }
 
 
