@@ -9,6 +9,7 @@
     color:black;
     margin-right:15px;
     
+    
 }
 .logoutBtn{
     background-color: #A52A2A;
@@ -18,3 +19,17 @@
 .logoutBtn:hover{
     background-color: #778899;
 }
+.LoginBtn{
+    background-color: #A52A2A;
+    width:60px;
+    text-align: center;
+    padding:5px;
+    border:none;
+    border-radius: 5px;
+    
+}
+.LoginBtn:hover{
+    background-color: #778899;
+    color:white;
+}
+

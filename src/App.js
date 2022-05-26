@@ -7,6 +7,7 @@ import Login from './pages/Login/Login';
 import SignUp from './pages/SignUp/SignUp';
 import ManageInventory from './pages/ManageInventory/ManageInventory';
 import AddNew from './pages/AddNewItem/AddNew';
+import NotFound from './pages/NotFound/NotFound';
 
 
 
@@ -20,6 +21,7 @@ function App() {
         <Route path='/addNew' element={<AddNew></AddNew>}></Route>
         <Route path='/signup' element={<SignUp></SignUp>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
+        <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
     </div>
   );

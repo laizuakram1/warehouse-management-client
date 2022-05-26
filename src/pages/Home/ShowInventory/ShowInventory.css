@@ -20,6 +20,9 @@ margin-bottom:5px;
 }
 
 .updateBtn{
+    background-color: #B0E0E6;
+    color:black;
+    border:none;
     width:280px;
     position:absolute;
     left:0;
