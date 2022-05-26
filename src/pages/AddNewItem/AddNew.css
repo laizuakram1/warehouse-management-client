@@ -1,8 +1,7 @@
 .addForm{
-  
+    box-shadow: -8px 5px 10px 5px rgb(231, 227, 227);
     width:450px;
     margin:auto;
-    border:1px solid grey;
     border-radius: 6px;
     margin-top:80px;
     padding:20px;
