@@ -1,8 +1,12 @@
+
+
 .navItem{
     align-items: center;
+    
 }
 .navItem a{
     text-decoration: none;
     color:black;
     margin-right:15px;
+    
 }

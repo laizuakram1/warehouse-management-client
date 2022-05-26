@@ -1,8 +1,9 @@
 .inventory-items{
-    border:1px solid grey;
     width:280px;
     padding:10px;
+    margin-bottom: 30px;
     border-radius: 5px;
+    box-shadow: -8px 5px 10px 5px rgb(231, 227, 227);
     position:relative;
     bottom:0;
    

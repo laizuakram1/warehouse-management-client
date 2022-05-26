@@ -36,7 +36,7 @@ const Header = () => {
 
   return (
     <div>
-      <Navbar className='fixed-top' bg="light" variant="light">
+      <Navbar className='fixed-top'>
         <Container>
           <Navbar.Brand href="#home">LabCare Warehouse</Navbar.Brand>
           <Nav className="ms-auto navItem">
