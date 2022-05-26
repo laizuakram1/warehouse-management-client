@@ -46,8 +46,8 @@ const Header = () => {
             <Link to='/'>My Items</Link>
 
             {
-              currentUser.email ? <Button onClick={handleSignout}>LogOut</Button>
-                : <Link className='btn btn-primary' to="/login">Login</Link>
+              currentUser.email ? <Button className='logoutBtn' onClick={handleSignout}>LogOut</Button>
+                : <Link className='LoginBtn' to="/login">Login</Link>
             }
 
 

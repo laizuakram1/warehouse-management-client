@@ -10,3 +10,11 @@
     margin-right:15px;
     
 }
+.logoutBtn{
+    background-color: #A52A2A;
+    border:none;
+    color:white;
+}
+.logoutBtn:hover{
+    background-color: #778899;
+}
