@@ -1,0 +1,30 @@
+.googleAuth-Button {
+    background-color: transparent;
+    color: black;
+    border: 1px solid black;
+    border-radius: 5px;
+    width:300px;
+    width:400px;
+}
+
+.googleAuth-Button:hover{
+    background-color:black;
+    font:bold;
+}
+.googleAuth-Button img{
+    margin-right:20px;
+  
+}
+.or-section{
+    display:flex;
+    margin-bottom:20px;
+}
+.or-section .line{
+    width:30%;
+    border:1px solid rgb(165, 162, 162);
+    height:0;
+    margin:auto;
+}
+.or-section p{
+    margin-right:10px;
+}

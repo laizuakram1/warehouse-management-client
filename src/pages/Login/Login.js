@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button } from 'react-bootstrap';
+import googleIcon from '../../images/google/google.png';
 import { auth } from '../../firebase.init';
 import { signInWithPopup,GoogleAuthProvider } from "firebase/auth";
 import { Link, useNavigate } from 'react-router-dom';
@@ -45,9 +46,18 @@ const Login = () => {
                 <input className='form-submit' type="submit" value="Login" />
                 <p>New to Lab care? <Link className='form-link' to='/signup'>Create an account</Link></p>
                 <br />
-                <Button onClick={googleAuth}>continue with google</Button>
+                <div className='or-section'>
+                    <div className='line'></div>
+                    <p>or</p>
+                    <div className='line'></div>
+                </div>
+                <Button className='googleAuth-Button' onClick={googleAuth}>
+                    <img src={googleIcon} alt="" />
+                    continue with google</Button>
+               
             </form>
         </div>
+
     );
 };
 
