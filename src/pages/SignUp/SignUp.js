@@ -1,6 +1,6 @@
 
 import { createUserWithEmailAndPassword, GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
-import React from 'react';
+import React, { useState } from 'react';
 import { Button } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
 import { auth } from '../../firebase.init';
@@ -13,6 +13,7 @@ const provider = new GoogleAuthProvider();
 
 const SignUp = () => {
     const navigate = useNavigate();
+    const [error, setError] = useState('');
 
     const handleSignup = (event) => {
         event.preventDefault();
@@ -24,13 +25,13 @@ const SignUp = () => {
             .then((userCredential) => {
                 // Signed in 
                 const user = userCredential.user;
-
+                navigate('/')
                 console.log(user);
               
                 // ...
             })
             .catch((error) => {
-                console.log(error.message);
+                setError(error.message);
                 // ..
             });
 
@@ -74,6 +75,7 @@ const SignUp = () => {
                 <div className='input-group'>
                     <label htmlFor="confirm-password">Confirm Password</label>
                     <input type="password" name="confirmPassword" />
+                    <p className='text-danger mt-3' >{error}</p>
                 </div>
                 <Button className='form-submit' type="submit">SignUp</Button>
 
