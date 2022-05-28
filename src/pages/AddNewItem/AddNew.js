@@ -9,6 +9,7 @@ const AddNew = () => {
     const { register, handleSubmit } = useForm();
     const onSubmit = data => console.log(data);
 
+    
     return (
         <div>
             <Header></Header>

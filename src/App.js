@@ -8,6 +8,7 @@ import SignUp from './pages/SignUp/SignUp';
 import ManageInventory from './pages/ManageInventory/ManageInventory';
 import AddNew from './pages/AddNewItem/AddNew';
 import NotFound from './pages/NotFound/NotFound';
+import Blog from './pages/Blog/Blog';
 
 
 
@@ -19,6 +20,7 @@ function App() {
         <Route path='/home' element={<Home></Home>}></Route>
         <Route path='/manageInventory' element={<ManageInventory></ManageInventory>}></Route>
         <Route path='/addNew' element={<AddNew></AddNew>}></Route>
+        <Route path='/blog' element={<Blog></Blog>}></Route>
         <Route path='/signup' element={<SignUp></SignUp>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
