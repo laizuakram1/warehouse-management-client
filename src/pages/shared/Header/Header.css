@@ -1,4 +1,14 @@
 
+.brandName{
+    text-decoration: none;
+    font-size: 20px;
+    color:black;
+    font-weight: 600;
+    transition: 0.3s;
+}
+.brandName:hover{
+    color:#A52A2A;
+}
 
 .navItem{
     align-items: center;
@@ -9,7 +19,9 @@
     color:black;
     margin-right:15px;
     
-    
+}
+.navItem a:hover{
+    color:#A52A2A; 
 }
 .logoutBtn{
     background-color: #A52A2A;

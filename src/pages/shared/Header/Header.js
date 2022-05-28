@@ -38,12 +38,13 @@ const Header = () => {
     <div>
       <Navbar className='fixed-top'>
         <Container>
-          <Navbar.Brand href="#home">LabCare Warehouse</Navbar.Brand>
+          <Link className='brandName' to="/">LabCare Warehouse</Link>
           <Nav className="ms-auto navItem">
             <Link to='/'>Home</Link>
             <Link to='/manageInventory'>Manage Items</Link>
             <Link to='/AddNew'>Add Items</Link>
             <Link to='/'>My Items</Link>
+            <Link to='/blog'>Blogs</Link>
 
             {
               currentUser.email ? <Button className='logoutBtn' onClick={handleSignout}>LogOut</Button>
