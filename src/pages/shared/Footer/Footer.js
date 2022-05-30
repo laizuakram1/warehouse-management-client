@@ -1,10 +1,10 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+import { faB, faCoffee} from '@fortawesome/free-solid-svg-icons';
 import './Footer.css';
-import { Link } from 'react-router-dom';
 
-var currentYear = new Date().getFullYear();
+
+
 
 const Footer = () => {
     return (
@@ -24,7 +24,7 @@ const Footer = () => {
                 </div>
                 <div className='social-link'>
                 <p><FontAwesomeIcon icon={faCoffee}></FontAwesomeIcon></p>
-                <p><FontAwesomeIcon icon={faCoffee}></FontAwesomeIcon></p>
+                <p><FontAwesomeIcon icon={faB} /></p>
                 <p><FontAwesomeIcon icon={faCoffee}></FontAwesomeIcon></p>
                 
 

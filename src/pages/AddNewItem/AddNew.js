@@ -1,34 +1,44 @@
-import React, { useEffect, useState } from 'react';
+
 import { Button } from 'react-bootstrap';
 import { useForm } from "react-hook-form";import { Link } from 'react-router-dom';
 import Header from '../shared/Header/Header';
  import './AddNew.css';
-
+ 
 
 
 const AddNew = () => {
-    const [data, setData] = useState({});
+   
     const { register, handleSubmit } = useForm();
-    const onSubmit = data => setData(data)
+    const onSubmit = data =>{
+        console.log(data)
+    const url = ` http://localhost:5000/product`
+
+    fetch(url,{
+        method:'POST',
+        headers:{
+            'content-type':'application/json'
+        },
+        body:JSON.stringify(data)
+    })
+    .then(res => res.json)
+    .then(result => {
+        console.log(result);
+        data.reset();
+    })
     
-    useEffect( () =>{
-        fetch(`http://localhost:5000/product`)
-        
-    },[])
-    
-    
-    
+    }
+  
     return (
         <div>
             <Header></Header>
             <form className='addForm' onSubmit={handleSubmit(onSubmit)}>
                 <h4 className='text-center text-success mb-3'>Add New Product</h4>
-                <input placeholder='Product Name' {...register("Name", { required: true, maxLength: 20 })} />
-                <input placeholder='Image link ' {...register("image", { required: true, maxLength: 20 })} />
-                <input placeholder='Price ' {...register("price", { required: true, maxLength: 20 })} />
-                <input placeholder='Quantity' type="number" {...register("quantity", { min: 18, max: 99 })} />
-                <input placeholder='Supplier Name ' {...register("supplier", { required: true, maxLength: 20 })} />
-                <textarea placeholder='Description ' {...register("description", { required: true, maxLength: 20 })} />
+                <input placeholder='Product Name' {...register("Name", { required: true })} />
+                <input placeholder='Image link ' {...register("image", { required: true})} />
+                 <input placeholder='Quantity' type="number" {...register("quantity")} />
+                 <input placeholder='Price' type="number" {...register("price")} />
+                <input placeholder='Supplier Name ' {...register("supplier", { required: true})} />
+                <textarea placeholder='Description ' {...register("description", { required: true})} />
                
               
               
