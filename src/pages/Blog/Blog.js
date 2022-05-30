@@ -32,7 +32,7 @@ const Blog = () => {
             </div>
             <div className='blog'>
                 <h4>Q. What is the purpose of JWT and how does it works?</h4>
-                <p>JWT mean Json Web Token. JWT is works for a client and server site. JWT use cryptographic algorithm for check issue or user information in server or client site. JWT are use as a security purpose for user authentication. Users any issued are signin with JWT is secure.</p>
+                <p>JWT mean Json Web Token. JWT is works for a client and server site. JWT use cryptographic algorithm for check issue or user information in server or client site. JWT are use as a security purpose for user authentication. Users any issued are signin with JWT is secured.</p>
             </div>
 
         </div>

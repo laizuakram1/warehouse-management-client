@@ -9,6 +9,7 @@ import ManageInventory from './pages/ManageInventory/ManageInventory';
 import AddNew from './pages/AddNewItem/AddNew';
 import NotFound from './pages/NotFound/NotFound';
 import Blog from './pages/Blog/Blog';
+import RequireAuth from './pages/Login/RequireAuth/RequireAuth';
 
 
 
@@ -19,7 +20,11 @@ function App() {
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/home' element={<Home></Home>}></Route>
         <Route path='/manageInventory' element={<ManageInventory></ManageInventory>}></Route>
-        <Route path='/addNew' element={<AddNew></AddNew>}></Route>
+        <Route path='/addNew' element={
+       <RequireAuth>
+          <AddNew></AddNew>
+       </RequireAuth>
+        }></Route>
         <Route path='/blog' element={<Blog></Blog>}></Route>
         <Route path='/signup' element={<SignUp></SignUp>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>

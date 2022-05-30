@@ -1,14 +1,22 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Button } from 'react-bootstrap';
 import { useForm } from "react-hook-form";import { Link } from 'react-router-dom';
 import Header from '../shared/Header/Header';
  import './AddNew.css';
 
 
-const AddNew = () => {
-    const { register, handleSubmit } = useForm();
-    const onSubmit = data => console.log(data);
 
+const AddNew = () => {
+    const [data, setData] = useState({});
+    const { register, handleSubmit } = useForm();
+    const onSubmit = data => setData(data)
+    
+    useEffect( () =>{
+        fetch(`http://localhost:5000/product`)
+        
+    },[])
+    
+    
     
     return (
         <div>
@@ -25,7 +33,7 @@ const AddNew = () => {
               
               
          <div className='text-center'>
-         <Button className='AddBtn btn-success'>Add</Button>
+         <Button type='submit' className='AddBtn btn-success'>Add</Button>
          </div>
             </form>
 
