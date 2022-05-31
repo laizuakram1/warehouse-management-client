@@ -3,14 +3,14 @@ import React from 'react';
 import './ShowInventory.css';
 
 const ShowInventory = ({item}) => {
-    const {image, Name, price, quantity, supplier, description} = item;
+    const {image, name, price, quantity, supplier, description} = item;
     return (
         <div className='inventory-items'>
            <div>
           <div className='text-center'>
-          <img src={image} alt="" />
+          <img src={image} alt="productImg" />
           </div>
-            <p>Name:{Name}</p>
+            <p>Name:{name}</p>
             <p className='fw-bold'>Price:${price}</p>
             <p>Quantity:{quantity}</p>
             <p>Supplier:{supplier}</p>

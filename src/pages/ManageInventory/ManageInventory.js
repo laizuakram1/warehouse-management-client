@@ -8,7 +8,7 @@ const ManageInventory = () => {
     const [items, setItems] = useState([])
 
     useEffect(() => {
-        fetch(`https://fakestoreapi.com/products`)
+        fetch(`https://pure-coast-15289.herokuapp.com/products`)
             .then(res => res.json())
             .then(data => setItems(data))
     }, [])

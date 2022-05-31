@@ -4,9 +4,10 @@ import ShowInventory from '../ShowInventory/ShowInventory';
 
 const Inventory = () => {
     const [items, setItems] = useState([]);
+    console.log(items);
 
     useEffect(() => {
-        fetch(`https://fakestoreapi.com/products`)
+        fetch(`https://pure-coast-15289.herokuapp.com/products`)
             .then(res => res.json())
             .then(data => setItems(data.slice(0,6)))
     }, [])
