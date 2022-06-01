@@ -28,11 +28,7 @@ function App() {
           <AddNew></AddNew>
        </RequireAuth>
         }></Route>
-        <Route path='/update/:id' element={
-          <RequireAuth>
-            <UpdateProduct></UpdateProduct>
-          </RequireAuth>
-        }></Route>
+        <Route path='/update/:id' element={<UpdateProduct></UpdateProduct>}></Route>
         <Route path='/blog' element={<Blog></Blog>}></Route>
         <Route path='/signup' element={<SignUp></SignUp>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
