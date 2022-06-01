@@ -12,7 +12,7 @@ import Blog from './pages/Blog/Blog';
 import RequireAuth from './pages/Login/RequireAuth/RequireAuth';
 import { ToastContainer } from 'react-bootstrap';
 
-require('dotenv').config()
+
 
 
 function App() {
