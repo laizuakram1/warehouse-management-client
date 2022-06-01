@@ -1,3 +1,7 @@
+.navbar{
+    height:56px;
+    background-color:rgb(135, 194, 246);
+}
 
 .brandName{
     text-decoration: none;

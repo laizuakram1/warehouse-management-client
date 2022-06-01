@@ -3,7 +3,7 @@ import { onAuthStateChanged } from 'firebase/auth';
 import React, { useEffect, useState } from 'react';
 import { Button, Container, Nav, Navbar, NavLink } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
-import { auth } from '../../../firebase.init';
+import auth from '../../../firebase.init';
 import { signOut } from "firebase/auth";
 import './Header.css';
 
@@ -36,7 +36,7 @@ const Header = () => {
 
   return (
     <div>
-      <Navbar className='fixed-top'>
+      <Navbar className='fixed-top navbar '>
         <Container>
           <Link className='brandName' to="/">LabCare Warehouse</Link>
           <Nav className="ms-auto navItem">

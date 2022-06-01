@@ -3,7 +3,7 @@ import { createUserWithEmailAndPassword, GoogleAuthProvider, signInWithPopup } f
 import React, { useState } from 'react';
 import { Button } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
-import { auth } from '../../firebase.init';
+import auth from '../../firebase.init';
 import googleIcon from '../../images/google/google.png';
 import './SignUp.css';
 

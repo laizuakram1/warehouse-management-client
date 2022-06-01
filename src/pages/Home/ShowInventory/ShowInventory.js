@@ -1,9 +1,12 @@
 import { Button } from 'react-bootstrap';
 import React from 'react';
 import './ShowInventory.css';
+import { Link } from 'react-router-dom';
 
 const ShowInventory = ({item}) => {
-    const {image, name, price, quantity, supplier, description} = item;
+    const {image, name, price, quantity, supplier, description,_id} = item;
+
+   
     return (
         <div className='inventory-items'>
            <div>
@@ -15,10 +18,10 @@ const ShowInventory = ({item}) => {
             <p>Quantity:{quantity}</p>
             <p>Supplier:{supplier}</p>
             <p>description:{description.slice(0,60)}</p>
-          
+           
            </div>
             <div className='mt-5'>
-            <Button className='updateBtn'>Update</Button>
+            <Link to={`update/${_id}`}><Button  className='updateBtn'>Update</Button></Link>
             </div>
         </div>
     );

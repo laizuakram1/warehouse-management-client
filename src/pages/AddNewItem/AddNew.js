@@ -1,6 +1,6 @@
 
 import { Button } from 'react-bootstrap';
-import { useForm } from "react-hook-form";import { Link } from 'react-router-dom';
+import { useForm } from "react-hook-form";
 import Header from '../shared/Header/Header';
  import './AddNew.css';
  
@@ -23,7 +23,7 @@ const AddNew = () => {
     .then(res => res.json)
     .then(result => {
         console.log(result);
-        data.reset();
+        
     })
     
     }

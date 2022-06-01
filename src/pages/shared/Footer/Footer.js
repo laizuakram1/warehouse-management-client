@@ -2,6 +2,7 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faB, faCoffee} from '@fortawesome/free-solid-svg-icons';
 import './Footer.css';
+import { FaFacebookF, FaViber, FaYoutube } from "react-icons/fa";
 
 
 
@@ -23,9 +24,9 @@ const Footer = () => {
                     <p>About</p>
                 </div>
                 <div className='social-link'>
-                <p><FontAwesomeIcon icon={faCoffee}></FontAwesomeIcon></p>
-                <p><FontAwesomeIcon icon={faB} /></p>
-                <p><FontAwesomeIcon icon={faCoffee}></FontAwesomeIcon></p>
+                <p><FaFacebookF/></p>
+                <p><FaViber/></p>
+                <p>< FaYoutube/></p>
                 
 
                 </div>

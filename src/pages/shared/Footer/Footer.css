@@ -35,11 +35,14 @@
     display:flex;
     justify-content: center;
     align-items:center;
+    
 }
 .social-link p{
     margin-right:30px;
-    
-    
-  
+    font-size: 20px;
+    transition:0.3s;
+}
+.social-link p:hover{
+    color:orange;
 }
 

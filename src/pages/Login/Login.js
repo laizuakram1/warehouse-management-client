@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Button } from 'react-bootstrap';
 import googleIcon from '../../images/google/google.png';
-import { auth } from '../../firebase.init';
+import auth from '../../firebase.init';
 import { signInWithPopup, GoogleAuthProvider, signInWithEmailAndPassword } from "firebase/auth";
 import { Link, useNavigate } from 'react-router-dom';
 import './Login.css';
