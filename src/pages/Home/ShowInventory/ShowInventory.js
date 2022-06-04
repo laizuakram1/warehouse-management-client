@@ -21,7 +21,7 @@ const ShowInventory = ({item}) => {
            
            </div>
             <div className='mt-5'>
-            <Link to={`/update/${_id}`}><Button>Update</Button></Link>
+            <Link className='UpdateBtn' to={`/update/${_id}`}><Button>Update</Button></Link>
             </div>
         </div>
     );

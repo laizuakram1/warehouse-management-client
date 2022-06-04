@@ -1,0 +1,23 @@
+.global-title{
+    width:50%; 
+    padding:40px;
+    text-align: justify; 
+}
+.global-Btn{
+    background-color: rgb(230, 101, 101);
+    border:0;
+    transition:0.4s;
+}
+.global-Btn:hover{
+    background-color: white;
+    color:black;
+    border:1px solid black;
+}
+
+.global-image{
+    width:50%;
+}
+.global-image img{
+    width:100%;
+    border-radius: 5px;
+}
