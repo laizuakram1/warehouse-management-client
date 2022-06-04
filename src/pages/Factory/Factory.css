@@ -1,0 +1,10 @@
+.factory-card{
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+}
+.factory-card img{
+    width:100%;
+    padding:15px;
+    border-radius: 5px;
+}
