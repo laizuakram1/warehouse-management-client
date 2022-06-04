@@ -1,8 +1,10 @@
 import React from 'react';
-import { Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const DisplayAllInventory = ({ item }) => {
-    const {image, name, price, quantity, supplier, description} = item;
+    const {image, name, price, quantity, supplier, description,} = item;
+
+   
     return (
         <div className='inventory-items'>
             <div>
@@ -17,7 +19,7 @@ const DisplayAllInventory = ({ item }) => {
 
             </div>
             <div className='mt-5'>
-                <Button className='updateBtn'>Delete</Button>
+               <Link to='/delete/:id' >Delete</Link>
             </div>
         </div>
     );

@@ -4,7 +4,6 @@ import ShowInventory from '../ShowInventory/ShowInventory';
 
 const Inventory = () => {
     const [items, setItems] = useState([]);
-    console.log(items);
 
     useEffect(() => {
         fetch(`https://pure-coast-15289.herokuapp.com/products`)
