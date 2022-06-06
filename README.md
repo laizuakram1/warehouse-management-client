@@ -6,15 +6,15 @@ Live link: https://labcare-international-1853a.web.app/
 ## Language uses
 
 ** For front-end **
---*Html and css
---*Javascript
---*React js
---*Bootstrap
+--* Html and css
+--* Javascript
+--* React js
+--* Bootstrap
 
 ** Backend **
---*Node js
---*Express js
---*Mongodb
+--* Node js
+--* Express js
+--* Mongodb
 
 ** authentication **
---*fireba
+--* fireba
