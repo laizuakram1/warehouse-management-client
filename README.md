@@ -6,7 +6,7 @@ Live link: https://labcare-international-1853a.web.app/
 ## Language uses
 
 ** For front-end **
--Html and css
+markup:-Html and css
 -Javascript
 -React js
 -Bootstrap
