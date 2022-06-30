@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { Button } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
+import useTooken from '../../Hooks/useToken';
 import googleIcon from '../../images/google/google.png';
 import './SignUp.css';
 
@@ -14,43 +15,42 @@ const provider = new GoogleAuthProvider();
 const SignUp = () => {
     const navigate = useNavigate();
     const [error, setError] = useState('');
+    const {user, setUser} = useState('');
+    const {gUser,setGuser} = useState('');
+    const {token} = useTooken(user || gUser); 
 
     const handleSignup = (event) => {
         event.preventDefault();
         const userEmail = event.target.email.value;
         const userPassword = event.target.password.value;
         const confirmPassword = event.target.confirmPassword.value;
+       
 
         createUserWithEmailAndPassword(auth, userEmail, userPassword, confirmPassword)
             .then((userCredential) => {
                 // Signed in 
                 const user = userCredential.user;
-                navigate('/')
-                console.log(user);
-              
-                // ...
+                setUser(user);
+                if(token){
+                    navigate('/')
+                }
             })
             .catch((error) => {
                 setError(error.message);
                 // ..
             });
 
-
-
-
-
-
-
     }
 
     const googleAuth = () => {
         signInWithPopup(auth, provider)
             .then((result) => {
-                const user = result.user;
-                navigate('/')
-                console.log(user);
-
-
+                const gUser = result.user;
+                setGuser(gUser);
+                if(token){
+                    navigate('/')
+                }
+               
                 // ...
             }).catch((error) => {
                 const err = error.message;
