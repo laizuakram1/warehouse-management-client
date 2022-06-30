@@ -38,7 +38,7 @@ const Header = () => {
     <div>
       <Navbar className='fixed-top navbar '>
         <Container>
-          <Link className='brandName' to="/">LabCare Warehouse</Link>
+          <Link className='brandName' to="/"><span className='text-danger'>LabCare</span> Warehouse</Link>
           <Nav className="ms-auto navItem">
             <Link to='/'>Home</Link>
             <Link to='/manageInventory'>Manage Items</Link>
