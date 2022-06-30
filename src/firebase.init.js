@@ -6,12 +6,12 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBw8cU7juKTUExO2Cpr9SRE19nqnu26CHU",
-  authDomain: "labcare-international-1853a.firebaseapp.com",
-  projectId: "labcare-international-1853a",
-  storageBucket: "labcare-international-1853a.appspot.com",
-  messagingSenderId: "235101239863",
-  appId: "1:235101239863:web:c85d8c8b7b55fe1ac75db2"
+  apiKey:process.env.REACT_APP_API_KEY,
+  authDomain:process.env.REACT_APP_AUTH_DOMAIN,
+  projectId:process.env.REACT_APP_PROJECT_ID,
+  storageBucket:process.env.REACT_APP_STORAGE_BUCKET,
+  messagingSenderId:process.env.REACT_APP_MESSAGING_SENDER_ID,
+  appId:process.env.REACT_APP_APP_ID
 };
 
 // Initialize Firebase
