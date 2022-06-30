@@ -8,10 +8,10 @@ import Header from '../shared/Header/Header';
 
 const AddNew = () => {
    
-    const { register, handleSubmit } = useForm();
+    const { register, reset, handleSubmit } = useForm();
     const onSubmit = data =>{
         console.log(data)
-    const url = ` https://pure-coast-15289.herokuapp.com/product`
+    const url = `http://localhost:5000/product`
 
     fetch(url,{
         method:'POST',
@@ -22,7 +22,8 @@ const AddNew = () => {
     })
     .then(res => res.json)
     .then(result => {
-        console.log(result);
+        reset();
+        window.location.reload(true)
         
     })
     

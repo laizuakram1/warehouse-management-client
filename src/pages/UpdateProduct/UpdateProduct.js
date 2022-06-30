@@ -1,3 +1,4 @@
+import { Toast } from 'bootstrap';
 import React, { useState } from 'react';
 import { Button } from 'react-bootstrap';
 import { useForm, } from 'react-hook-form';
@@ -9,7 +10,7 @@ const UpdateProduct = () => {
     const onSubmit = data => {
         console.log(data);
         
-        const url = `https://pure-coast-15289.herokuapp.com/product/${id}`;
+        const url = `http://localhost:5000/${id}`;
        
         fetch(url,{
             method:'PUT',
@@ -21,7 +22,7 @@ const UpdateProduct = () => {
         })
         .then(res => res.json)
         .then(result => {
-            console.log(result);
+            Toast('input data updated')
             
         })
 

@@ -6,9 +6,9 @@ import './ManageInventory.css'
 
 const ManageInventory = () => {
     const [items, setItems] = useState([])
-
+    console.log(items)
     useEffect(() => {
-        fetch(`https://pure-coast-15289.herokuapp.com/products`)
+        fetch(`http://localhost:5000/products`)
             .then(res => res.json())
             .then(data => setItems(data))
     }, [])
@@ -22,7 +22,7 @@ const ManageInventory = () => {
             
                 {
                     items.map(data => <DisplayAllInventory
-                        key={data.id}
+                        key={data._id}
                         item={data}
                     ></DisplayAllInventory>)
                 }
