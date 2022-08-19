@@ -6,7 +6,7 @@ const Inventory = () => {
     const [items, setItems] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/products`)
+        fetch(`https://pure-coast-15289.herokuapp.com/products`)
             .then(res => res.json())
             .then(data => setItems(data.slice(0,6)))
     }, [])

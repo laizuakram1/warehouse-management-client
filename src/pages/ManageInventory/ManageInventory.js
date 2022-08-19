@@ -8,7 +8,7 @@ const ManageInventory = () => {
     const [items, setItems] = useState([])
     console.log(items)
     useEffect(() => {
-        fetch(`http://localhost:5000/products`)
+        fetch(`https://pure-coast-15289.herokuapp.com/products`)
             .then(res => res.json())
             .then(data => setItems(data))
     }, [])

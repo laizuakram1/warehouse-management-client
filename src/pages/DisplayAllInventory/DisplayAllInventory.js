@@ -9,7 +9,7 @@ console.log(_id)
     const handleDelete = ()=>{
         const proceed = window.confirm('are sure delete this product?');
         if(proceed){
-           fetch(`http://localhost:5000/item/${_id}`,{
+           fetch(`https://pure-coast-15289.herokuapp.com/item/${_id}`,{
             method:'DELETE',
 
            })
