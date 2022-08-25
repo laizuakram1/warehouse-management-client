@@ -1,4 +1,3 @@
-import { Toast } from 'bootstrap';
 import React, { useState } from 'react';
 import { useEffect } from 'react';
 import { Button } from 'react-bootstrap';
@@ -6,13 +5,17 @@ import { useForm, } from 'react-hook-form';
 import { useParams } from 'react-router-dom';
 
 const UpdateProduct = () => {
-    const [equipment, setEquipment] = useState({});
-    const { image, name, price, quantity, supplier, description, _id} = equipment;
+    const [equipment, setEquipment] = useState([]);
+    const {name, image, description, price, quantity, supplier} = equipment;
+    
+    // const { image, name, price, quantity, supplier, description} = equipment;
+    
+    
 
     const { id } = useParams();
     const { register, handleSubmit } = useForm();
 
-    // fetch product details
+    
     useEffect(() => {
         fetch(`http://localhost:5000/equipment/${id}`)
             .then(res => res.json())
@@ -22,10 +25,27 @@ const UpdateProduct = () => {
     }, [id])
 
 
+    const handleDelivered = ()=>{
+        const url = `http://localhost:5000/quantity/${id}`;
+
+        fetch(url, {
+            method:'PUT',
+            headers:{
+                'content-type':'application/json'
+            },
+            body: JSON.stringify(equipment)
+        })
+        .then(res =>res.json())
+        .then(data =>{
+            console.log(data)
+            
+        })
+    }
+
     // update product quantity
     const onSubmit = data => {
 
-        const url = `https://pure-coast-15289.herokuapp.com/${id}`;
+        const url = `http://localhost:5000/product/${id}`;
 
         fetch(url, {
             method: 'PUT',
@@ -35,29 +55,13 @@ const UpdateProduct = () => {
             body: JSON.stringify(data)
 
         })
-            .then(res => res.json)
+            .then(res => res.json())
             .then(result => {
-                Toast('input data updated')
+                console.log(result)
+                
 
             })
 
-    }
-
-    //delivered button onclick update quantity
-    const handleDelivered = ()=>{
-        const url = `http://localhost:5000/quantity/${id}`;
-
-        fetch(url, {
-            method:'PUT',
-            headers:{
-                'content-type':'application/json'
-            },
-            body: JSON.stringify(quantity)
-        })
-        .then(res =>res.json)
-        .then(data =>{
-            console.log(data)
-        })
     }
 
 
@@ -96,4 +100,4 @@ const UpdateProduct = () => {
     );
 };
 
-export default UpdateProduct; <h2>Update Product</h2>
+export default UpdateProduct;

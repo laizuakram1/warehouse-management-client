@@ -4,6 +4,7 @@ import ShowInventory from '../ShowInventory/ShowInventory';
 
 const Inventory = () => {
     const [items, setItems] = useState([]);
+   
 
     useEffect(() => {
         fetch(`https://pure-coast-15289.herokuapp.com/products`)
@@ -16,8 +17,8 @@ const Inventory = () => {
 
             <div className='container inventory-container'>
                 {
-                    items.map(item => <ShowInventory
-                        key={item._id}
+                    items.map((item,index) => <ShowInventory
+                        key={index}
                         item={item}
                     ></ShowInventory>)
                 }

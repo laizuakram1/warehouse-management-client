@@ -4,7 +4,7 @@ import './ShowInventory.css';
 import { Link } from 'react-router-dom';
 
 const ShowInventory = ({item}) => {
-    const {image, name, price, quantity, supplier, description,_id} = item;
+    const {image, name, price, quantity, supplier, description, _id} = item;
 
    
     return (
