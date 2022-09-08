@@ -18,7 +18,7 @@ const Inventory = () => {
             <div className='container inventory-container'>
                 {
                     items.map((item,index) => <ShowInventory
-                        key={index}
+      a                  key={index}
                         item={item}
                     ></ShowInventory>)
                 }

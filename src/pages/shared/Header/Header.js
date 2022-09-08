@@ -2,7 +2,7 @@
 import { onAuthStateChanged } from 'firebase/auth';
 import React, { useEffect, useState } from 'react';
 import { Button, Container, Nav, Navbar, NavLink } from 'react-bootstrap';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import { signOut } from "firebase/auth";
 import './Header.css';
@@ -12,7 +12,7 @@ import './Header.css';
 
 
 const Header = () => {
-  const navigate = useNavigate();
+ 
   const [currentUser, setUser] = useState({});
 
   useEffect(() => {

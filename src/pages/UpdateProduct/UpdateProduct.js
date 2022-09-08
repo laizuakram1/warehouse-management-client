@@ -9,13 +9,10 @@ const UpdateProduct = () => {
     const {name, image, description, price, quantity, supplier} = equipment;
     
     // const { image, name, price, quantity, supplier, description} = equipment;
-    
-    
-
     const { id } = useParams();
     const { register, handleSubmit } = useForm();
-
     
+
     useEffect(() => {
         fetch(`http://localhost:5000/equipment/${id}`)
             .then(res => res.json())
@@ -41,6 +38,8 @@ const UpdateProduct = () => {
             
         })
     }
+
+   
 
     // update product quantity
     const onSubmit = data => {
