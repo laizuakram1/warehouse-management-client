@@ -41,10 +41,13 @@ const Header = () => {
           <Link className='brandName' to="/"><span className='text-danger'>LabCare</span> Warehouse</Link>
           <Nav className="ms-auto navItem">
             <Link to='/'>Home</Link>
-            <Link to='/manageInventory'>Manage Items</Link>
-            <Link to='/AddNew'>Add Items</Link>
-            <Link to='/'>My Items</Link>
             <Link to='/blog'>Blogs</Link>
+            {currentUser.email && <li>
+              <Link to='/manageInventory'>Manage Items</Link>
+              <Link to='/AddNew'>Add Items</Link>
+              <Link to='/'>My Items</Link>
+             
+              </li>}
 
             {
               currentUser.email ? <Button className='logoutBtn' onClick={handleSignout}>LogOut</Button>
