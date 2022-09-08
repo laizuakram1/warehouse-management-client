@@ -10,7 +10,7 @@ import AddNew from './pages/AddNewItem/AddNew';
 import NotFound from './pages/NotFound/NotFound';
 import Blog from './pages/Blog/Blog';
 import RequireAuth from './pages/Login/RequireAuth/RequireAuth';
-import { ToastContainer } from 'react-bootstrap';
+import { ToastContainer} from 'react-toastify';
 import UpdateProduct from './pages/UpdateProduct/UpdateProduct';
 
 
